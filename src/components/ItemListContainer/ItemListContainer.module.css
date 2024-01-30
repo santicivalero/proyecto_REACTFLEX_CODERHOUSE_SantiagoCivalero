@@ -1,0 +1,7 @@
+.itemListContainer {
+    /* background-color: #DBE7C9; */
+    color: #294B29;
+    height: 100vh;
+    background-image: url("../../assets/circle-scatter-haikei.svg");
+    background-size: cover;
+}
