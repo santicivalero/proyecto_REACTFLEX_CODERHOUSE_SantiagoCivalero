@@ -3,6 +3,10 @@
   margin: 0;
   padding: 0;
   text-align: center;
+
+  height: 100vh;
+  background-image: url("/circle-scatter-haikei.svg");
+  background-size: cover;
 }
 
 .row {
