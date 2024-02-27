@@ -1,8 +1,8 @@
 import itemListContainer from './ItemListContainer.module.css'
 import { useEffect, useState } from "react";
 import { getProducts } from "../../asyncMock";
-import { ItemList } from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
+import ItemList from "../ItemList/ItemList";
 import Spinner from "../Spinner/Spinner";
 
 

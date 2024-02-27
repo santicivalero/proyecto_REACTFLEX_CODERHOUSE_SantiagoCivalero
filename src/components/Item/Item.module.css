@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap');
+
+.card {
+    width: 300px;
+    border: 4px solid #789461;
+}
+
+.cardTitle {
+    height: 50px;
+    color: #294B29;
+    font-family: 'Londrina Solid', sans-serif;
+    font-size: 1.4rem;
+    border-bottom: 2px solid #789461;
+    padding-bottom: 60px;
+}
+
+.cardText {
+    font-family: 'Londrina Solid', sans-serif;
+    border-top: 2px solid #789461;
+    border-bottom: 2px solid #789461;
+}
+
+.botonDetalles {
+    font-family: 'Londrina Solid', sans-serif;
+    border: 2px solid #789461;
+}

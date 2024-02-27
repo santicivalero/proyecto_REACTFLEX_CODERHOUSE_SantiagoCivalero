@@ -1,14 +1,29 @@
-import { Item } from "../Item/Item"
-import itemList from "./ItemList.module.css"
+import Item from "../Item/Item";
+import itemList from "./ItemList.module.css";
 
+const ItemList = ({ products }) => {
+  // Ordenar los productos por el nombre antes de renderizar
+  products.sort((a, b) => {
+    // Convertir ambos nombres a minúsculas antes de comparar
+    const nameA = a.name.toLowerCase();
+    const nameB = b.name.toLowerCase();
 
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+    return 0;
+  });
 
-
-export const ItemList = ({products}) => {
   return (
-    <div className="row row-cols-1 row-cols-md-3">
-
-        {products.map( product => <Item key={product.id} {...product}  />)}
+    <div className={`row row-cols-1 row-cols-md-4 ${itemList.itemList}`}>
+      {products.map((product) => (
+        <Item key={product.id} {...product} />
+      ))}
     </div>
-  )
-}
+  );
+};
+
+export default ItemList;
