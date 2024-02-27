@@ -1,5 +1,8 @@
 import ItemCount from "../ItemCount/ItemCount";
 import itemDetail from "./ItemDetail.module.css";
+import { Link } from "react-router-dom";
+
+
 
 const ItemDetail = ({ name, description, img, price, stock }) => {
 
@@ -12,6 +15,9 @@ const ItemDetail = ({ name, description, img, price, stock }) => {
           <p className={`card-text ${itemDetail.cardText}`}> {description} </p>
           <p className={`${itemDetail.cardPrice}`}>Precio: {price} </p>
           <ItemCount stock={stock} />
+          <Link to="/">
+          <button className="btn btn-outline-success">&lt;&lt;&lt; Volver</button>
+          </Link>
         </div>
       </div>
     </div>

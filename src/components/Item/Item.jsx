@@ -11,7 +11,7 @@ const Item = ({ id, name, img, description }) => {
   };
 
   // Llama a limitText para limitar la descripción antes de renderizar el componente
-  const limitedDescription = limitText(description, 88); // Puedes ajustar el número máximo de caracteres aquí
+  const limitedDescription = limitText(description, 88);
 
 
 

@@ -22,8 +22,6 @@ const ItemDetailContainer = () => {
         setIsLoading(false);
       })
 
-    
-
    }, [])
 
   return (

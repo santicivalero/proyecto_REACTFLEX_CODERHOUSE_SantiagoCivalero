@@ -42,7 +42,12 @@ li {
 li:hover {
     color: #DBE7C9;
     border-color: #DBE7C9; 
-}   
+}
+
+.activeLi li {
+    color: #DBE7C9;
+    border-color: #DBE7C9; 
+}
 
 .logo {
     margin-left: -5px;

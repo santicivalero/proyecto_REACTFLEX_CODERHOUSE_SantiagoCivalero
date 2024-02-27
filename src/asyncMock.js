@@ -1,13 +1,3 @@
-const products1 = [
-    { id: "1", name: "Zapato", img: "url-img", price: 100, category: "calzados", description: "Una Zapato", stock: 10 },
-    { id: "2", name: "Bota", img: "url-img", price: 100, category: "calzados", description: "Una Bota", stock: 10 },
-    { id: "3", name: "Ojota", img: "url-img", price: 100, category: "calzados", description: "Un Ojota", stock: 10 },
-    { id: "4", name: "Zapatilla", img: "url-img", price: 100, category: "calzados", description: "Una Zapatilla", stock: 10 },
-    { id: "5", name: "Remera", img: "url-img", price: 100, category: "ropa", description: "Una Remera", stock: 10 },
-    { id: "6", name: "Camisa", img: "url-img", price: 100, category: "ropa", description: "Una Camisa", stock: 10 },
-    { id: "7", name: "Pantalón", img: "url-img", price: 100, category: "ropa", description: "Una Pantalón", stock: 10 },
-  ];
-
 const products = [
   { id: "1", name: "Catnip deshidratado", img: "1-catnip-deshidratado.webp", price: 5100, category: "gatos", description: "La hierba gatera anima a los gatos a jugar, a moverse y hace que se sientan bien. No es adictiva y no les provoca ningún daño.", stock: 25 },
   {id: "2", name: "Arnés para gatos", img: "2-arnes-rojo-gato.jpg", price: 22300, category: "gatos", description: "Arnés suave con correa elástica. Perímetro regulable: de 24 a 42 cm. Correa elástica: 1.20 m. Hecho de malla de alta calidad y nylon. Colores negro o rojo.", stock: 4},
@@ -23,18 +13,9 @@ const products = [
   {id: "12", name: "Kit Pecera Marina Deluxe", img: "12-kit-pecera-marina-deluxe.webp", price: 120500, category: "otros", description: "Acuario de vidrio de 38 litros. Vidrio 8 mm grosor. Filtro con clip Marina Slim S15 con cartuchos de filtro de cambio rápido. Módulo de iluminación LED de efecto natural de larga duración incorporado en la cubierta del acuario. Tamaño: 51.3 cm L x 26 cm W x 32.8 cm H", stock: 6},
   {id: "13", name: "Alimento para canarios Tropmix 1 Kg", img: "13-alimento-para-canarios.webp", price: 5900, category: "otros", description: "Mix de semillas para la alimentación diaria de aves. Su fórmula está pensada para asemejarse a la alimentación natural de estos animales, y al mismo tiempo se encuentra enriquecida con los nutrientes que necesitan para una salud óptima.", stock: 18},
   {id: "14", name: "Hueso soga antiestrés", img: "14-hueso-de-soga-antiestres-perro.webp", price: 6000, category: "perros", description: "Sogas 100% ecológicas hechas con fibras naturales no blanqueadas y pinturas vegetales. Reducen el estrés de la mascota. Lavables y durables. Aptas para todas las razas y mordidas", stock: 10},
-
-
-
-  
-
-
-
-
-
-
-  
 ]
+
+
   export const getProducts = () => {
     return new Promise((resolve, reject) => {
       if (products.length > 0) {

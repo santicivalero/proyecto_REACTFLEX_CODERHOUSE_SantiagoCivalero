@@ -1,4 +1,3 @@
-import itemListContainer from './ItemListContainer.module.css'
 import { useEffect, useState } from "react";
 import { getProducts } from "../../asyncMock";
 import { useParams } from "react-router-dom";
@@ -16,15 +15,13 @@ const ItemListContainer = ({greeting, message}) => {
 
   useEffect( () => { 
 
-    setIsLoading(true); // Cada ves que se cargue nuestro componente vamos a setear en true el isLoading para que nos aparezca la carga
+    setIsLoading(true);
     getProducts()
       .then( resp => {
-        // Verifico si existe una category en el parámetro
         if(category) {
           const productsFilter = resp.filter( product => product.category === category );
           setProducts(productsFilter)
         } else {
-          // Si no existe una categoría en el parámetro seteamos todos los productos en el state products
           setProducts(resp);
         }
           setIsLoading(false);
@@ -37,19 +34,6 @@ const ItemListContainer = ({greeting, message}) => {
     { isLoading ? <Spinner /> : <ItemList products={products} /> }
     </>
   )
-
-
-
-
-
-
-
-  // return (
-  //   <div className={`row ${itemListContainer.itemListContainer}`}>
-  //       <h1 className='row col-md-12 text-center'>{greeting}</h1>
-  //       <p className='row col-md-12'>{message}</p>
-  //   </div>
-  // )
 }
 
 export default ItemListContainer

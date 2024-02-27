@@ -2,9 +2,8 @@ import Item from "../Item/Item";
 import itemList from "./ItemList.module.css";
 
 const ItemList = ({ products }) => {
-  // Ordenar los productos por el nombre antes de renderizar
+  // Ordena los productos por el nombre antes de renderizar
   products.sort((a, b) => {
-    // Convertir ambos nombres a minúsculas antes de comparar
     const nameA = a.name.toLowerCase();
     const nameB = b.name.toLowerCase();
 
