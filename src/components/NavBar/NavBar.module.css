@@ -57,3 +57,16 @@ li:hover {
 .logo:hover {
     transform: scale(1.2) rotate(20deg);
 }
+
+.cart {
+    transition: transform 1s;
+}
+
+.cart:hover {
+    transform: scale(1.1);
+}
+
+.activeCart {
+    border-top: 1px solid #DBE7C9;
+    border-bottom: 1px solid #DBE7C9;
+}

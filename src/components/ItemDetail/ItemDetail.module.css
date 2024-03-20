@@ -2,6 +2,7 @@
 
 .card {
     padding-top: 20px;
+    
 }
 
 .cardTitle {
@@ -24,3 +25,12 @@
     color:#789461;
 }
 
+.botonVerCarrito button {
+    margin-bottom: 10px;
+    border: 3px double #DBE7C9;
+}
+
+.botonVerCarrito button:hover {
+    background-color: #DBE7C9;
+    color: #789461;
+}
