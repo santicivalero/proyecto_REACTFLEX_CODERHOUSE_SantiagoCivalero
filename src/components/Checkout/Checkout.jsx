@@ -2,6 +2,8 @@ import { useContext, useState } from "react";
 import { CartContext } from "../../context/CartContext";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../../config/firebaseConfig";
+import checkout from "./Checkout.module.css"
+import Swal from "sweetalert2";
 
 export const Checkout = () => {
   const { cart, total, clearCart } = useContext(CartContext);
@@ -59,23 +61,31 @@ export const Checkout = () => {
     // Setear el orderId
     setOrderId(order.id);
 
+    Swal.fire({
+      title: `Su ID de orden de compra es: ${order.id}`,
+      text: "¡Gracias!",
+      icon: "info"
+    });
+
   };
 
   if(orderId) {
-    return <h3>Su ID de orden de compra es {orderId} </h3>
+    return <h3 className={checkout.idCompra}>Su ID de orden de compra es {orderId} </h3>
   }
 
   return (
-    <div className="container d-flex justify-content-center m-5">
+    <div className={`container align-content-center ${checkout.checkoutContainer}`}>
+    <div className={`row d-flex justify-content-center m-5 card col-md-12 ${checkout.checkout}`}>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="">Nombre</label>
+        <label htmlFor="">Nombre:</label>
         <input type="text" className="form-control" value={formCheckout.name} onChange={handleName} />
-        <label htmlFor="">Teléfono</label>
-        <input type="number" className="form-control" value={formCheckout.phone} onChange={handlePhone} />
-        <label htmlFor="">Email</label>
+        <label htmlFor="">Teléfono:</label>
+        <input type="text" className="form-control" value={formCheckout.phone} onChange={handlePhone} />
+        <label htmlFor="">Email:</label>
         <input type="email" className="form-control" value={formCheckout.email} onChange={handleEmail} />
-        <input type="submit" className="mt-3 btn btn-success" value="Terminar la compra" />
+        <input type="submit" className="mt-3 btn btn-success mb-3" value="Terminar la compra" />
       </form>
+    </div>
     </div>
   );
 };

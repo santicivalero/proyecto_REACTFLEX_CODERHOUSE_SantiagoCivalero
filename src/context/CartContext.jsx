@@ -9,6 +9,19 @@ export const CartContextProvider = ({ children }) => {
   const [totalItems, setTotalItems] = useState(0);
   const [total, setTotal] = useState(0);
 
+  // Función para guardar el carrito en localStorage
+  const saveCartToLocalStorage = (cartData) => {
+    localStorage.setItem("cart", JSON.stringify(cartData));
+  };
+
+  // Función para cargar el carrito desde localStorage al cargar el componente
+  useEffect(() => {
+    const storedCart = JSON.parse(localStorage.getItem("cart"));
+    if (storedCart) {
+      setCart(storedCart);
+    }
+  }, []);
+
   const addItem = (item, quantity) => {
     // Copia del cart
     const cartCopy = [...cart];
@@ -31,7 +44,12 @@ export const CartContextProvider = ({ children }) => {
 
       // Hacemos una copia del cart actual y agregamos el nuevo item
       setCart([...cart, newItem]);
+
+      // Después de actualizar el carrito, guardar en localStorage
+    saveCartToLocalStorage([...cartCopy, newItem]);
     }
+
+    
   };
 
   const removeItem = (id) => {
@@ -39,11 +57,17 @@ export const CartContextProvider = ({ children }) => {
 
     const cartFilter = cart.filter((item) => item.id !== id);
     setCart(cartFilter);
+
+    // Después de actualizar el carrito, guardar en localStorage
+    saveCartToLocalStorage(cartFilter);
   };
 
   const clearCart = () => {
     // Limpiar el carrito
     setCart([]);
+
+    // Después de limpiar el carrito, borrar el localStorage
+    localStorage.removeItem("cart");
   };
 
   const handleTotalItems = () => { 

@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap');
+
+.checkout {
+    font-family: 'Londrina Solid', sans-serif;
+    border: 4px solid #789461;
+    width: 400px;
+}
+
+.checkoutContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.form-control:focus {
+    border-color: #28a745 !important;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25) !important;
+} 
+
+.idCompra {
+    margin-top:60px;
+}
