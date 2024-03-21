@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
-import { getProduct } from "../../asyncMock";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import Spinner from "../Spinner/Spinner";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../config/firebaseConfig";
-
-
 
 
 const ItemDetailContainer = () => {

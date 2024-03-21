@@ -17,7 +17,7 @@ const ItemList = ({ products }) => {
   });
 
   return (
-    <div className={`row row-cols-1 row-cols-md-4 ${itemList.itemList}`}>
+    <div className={`row row-cols-1 row-cols-md-4 mt-4 ${itemList.itemList}`}>
       {products.map((product) => (
         <Item key={product.id} {...product} />
       ))}

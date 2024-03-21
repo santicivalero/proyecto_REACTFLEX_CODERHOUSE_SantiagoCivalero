@@ -10,13 +10,12 @@ export const Cart = () => {
 
   const handleDeleteItem = (item) => { 
     
-
     Swal.fire({
       icon: "question",
       title: `¿Estás seguro de que deseas eliminar ${item.name} del carrito? `,
       showCancelButton: true,
       showConfirmButton: true,
-      
+
     }).then( resp => {
       if(resp.isConfirmed) {
         removeItem(item.id)
@@ -26,15 +25,13 @@ export const Cart = () => {
         })
       }
     })
-
    }
 
    const handleClearCart = (item) => { 
     
-
     Swal.fire({
       icon: "question",
-      title: `¿Estás seguro de que deseas vaciar el carrito? `,
+      title: `¿Estás seguro de que deseás vaciar el carrito? `,
       showCancelButton: true,
       showConfirmButton: true,
       
@@ -47,18 +44,17 @@ export const Cart = () => {
         })
       }
     })
-
    }
 
   return (
     <div className={cartCss.cart}>
       <div className="row">
         {cart.map((item) => (
-          <div key={item.id} className={` p-3 card  ${cartCss.cartItem}`}>
-            <p key={item.id}>Nombre: {item.name} </p>
-            <p>Cantidad: {item.quantity} </p>
-            <p>Precio Unitario: {item.price} </p>
-            <p>Subtotal: ${item.subTotal}</p>
+          <div key={item.id} className={`p-3 card ${cartCss.cartItem}`}>
+            <p className={cartCss.borderBottom} key={item.id}><u>Nombre</u>: {item.name} </p>
+            <p className={cartCss.borderBottom}><u>Cantidad</u>: {item.quantity} </p>
+            <p className={cartCss.borderBottom}><u>Precio Unitario</u>: {item.price} </p>
+            <p className={cartCss.borderBottom}><u>Subtotal</u>: ${item.subTotal}</p>
             <div>
               <button className="btn btn-danger" onClick={() => handleDeleteItem(item)}>
                 Eliminar
@@ -70,7 +66,7 @@ export const Cart = () => {
       <div className="row">
         {total > 0 ? (
           <>
-            <h4>Total ${total} </h4>
+            <h4 className={cartCss.total}> Total: ${total} </h4>
             <div className={cartCss.botones}>
             <button className="btn btn-outline-success" onClick={handleClearCart}>
               Vaciar Carrito

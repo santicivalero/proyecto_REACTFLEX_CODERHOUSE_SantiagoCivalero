@@ -1,17 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap');
 
 .cart {
-    /* height: 100vh; */
-    /* background-image: url("/circle-scatter-haikei.svg"); */
-    background-size: cover;
-    margin-top: 20px;
-    font-family: 'Londrina Solid', sans-serif;
-  }
+  /* background-size: cover; */
+  margin-top: 20px;
+  font-family: 'Londrina Solid', sans-serif;
+}
 
-  .cartItem {
-    width: 290px;
-    border: 4px solid #789461;
-    margin: 10px 20px 10px;
+.cartItem {
+  width: 290px;
+  border: 4px solid #789461;
+  margin: 10px 20px 10px;
 }
 
 .botones {
@@ -35,4 +33,12 @@
 .carritoVacio {
   margin-top: 30px;
   color: #789461;
+}
+
+.total {
+  color: #294B29;
+}
+
+.borderBottom {
+  border-bottom: 2px solid #789461;
 }
