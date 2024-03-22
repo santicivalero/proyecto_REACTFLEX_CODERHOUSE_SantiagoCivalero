@@ -6,3 +6,4 @@
 - Como Base de Datos para los datos ficticios de los productos y órdenes de compra se recurrió al servicio gratuito Firebase de Google.
 - Las imágenes se alojan dentro de las carpetas Public y Assets del proyecto.
 - Autor: Santiago Civalero (santiagocivalero@hotmail.com).
+- Link sitio: https://jolly-valkyrie-c7024e.netlify.app/
