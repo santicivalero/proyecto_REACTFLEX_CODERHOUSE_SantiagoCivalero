@@ -3,6 +3,7 @@ import itemDetail from "./ItemDetail.module.css";
 import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import { CartContext } from "../../context/CartContext";
+import Swal from "sweetalert2";
 
 
 
@@ -16,12 +17,28 @@ const ItemDetail = ({ id, name, description, img, price, stock }) => {
     const item = {
       id,
       price,
-      name
+      name,
+      img,
+
     }
      
     addItem(item, quantity)
     setAddedToCart(true);
 
+    if(quantity === 1) {
+      Swal.fire({
+        icon: "success",
+        title: "Producto agregado al carrito",
+        text: `Se ha agregado "${name}"`
+      })
+    } else {
+      Swal.fire({
+        icon: "success",
+        title: "Productos agregados al carrito",
+        text: `Se han agregado ${quantity} "${name}"`
+      })
+    }
+    
    }
 
   return (
@@ -41,11 +58,9 @@ const ItemDetail = ({ id, name, description, img, price, stock }) => {
             </Link>
           ) : (
             <>
-              <ItemCount stock={stock} onAdd={onAdd} />
+              <ItemCount stock={stock} price={price} onAdd={onAdd} />
             </>
           )}
-
-          {/* <ItemCount stock={stock} onAdd={onAdd} /> */}
           <Link to="/">
           <button className="btn btn-outline-success">&lt;&lt;&lt; Volver</button>
           </Link>

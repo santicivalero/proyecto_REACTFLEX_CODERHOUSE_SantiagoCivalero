@@ -9,19 +9,15 @@
 .cardTitle {
     height: 50px;
     color: #294B29;
-    /* font-family: 'Londrina Solid', sans-serif; */
     font-size: 2rem;
-    /* text-decoration:underline; */
     border-bottom: 2px solid #294B29;
 }
 
 .cardText {
-    /* font-family: 'Londrina Solid', sans-serif; */
     font-size: 1.1rem;
 }
 
 .cardPrice {
-    /* font-family: 'Londrina Solid', sans-serif; */
     font-size: 1.8rem;
     color:#789461;
 }

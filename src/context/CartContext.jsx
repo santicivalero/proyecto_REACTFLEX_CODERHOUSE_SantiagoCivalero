@@ -34,7 +34,6 @@ export const CartContextProvider = ({ children }) => {
       setCart(cartCopy);
     } else {
       // Si da -1 es por que el producto no se encuentra en el carrito
-
       // Armamos el objeto del item para guardar en el cart
       const newItem = {
         ...item,
@@ -46,10 +45,10 @@ export const CartContextProvider = ({ children }) => {
       setCart([...cart, newItem]);
 
       // Después de actualizar el carrito, guardar en localStorage
-    saveCartToLocalStorage([...cartCopy, newItem]);
+      saveCartToLocalStorage([...cartCopy, newItem]);
+
     }
 
-    
   };
 
   const removeItem = (id) => {

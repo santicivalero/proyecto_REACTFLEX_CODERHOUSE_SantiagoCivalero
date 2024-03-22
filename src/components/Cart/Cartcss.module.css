@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap');
 
 .cart {
-  /* background-size: cover; */
   margin-top: 20px;
   font-family: 'Londrina Solid', sans-serif;
 }
@@ -41,4 +40,9 @@
 
 .borderBottom {
   border-bottom: 2px solid #789461;
+}
+
+.bottomImage {
+  margin-bottom: 20px;
+  padding-bottom: 5px;
 }

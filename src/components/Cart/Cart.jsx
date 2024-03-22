@@ -21,13 +21,13 @@ export const Cart = () => {
         removeItem(item.id)
         Swal.fire({
           icon: "success",
-          title: "Producto eliminado"
+          title: "Producto/s eliminado/s"
         })
       }
     })
    }
 
-   const handleClearCart = (item) => { 
+   const handleClearCart = () => { 
     
     Swal.fire({
       icon: "question",
@@ -55,6 +55,9 @@ export const Cart = () => {
             <p className={cartCss.borderBottom}><u>Cantidad</u>: {item.quantity} </p>
             <p className={cartCss.borderBottom}><u>Precio Unitario</u>: {item.price} </p>
             <p className={cartCss.borderBottom}><u>Subtotal</u>: ${item.subTotal}</p>
+            <div className={`${cartCss.borderBottom} ${cartCss.bottomImage}`}>
+            <img src={`/img/${item.img}`} alt="" width="50" height="50"/>
+            </div>
             <div>
               <button className="btn btn-danger" onClick={() => handleDeleteItem(item)}>
                 Eliminar
@@ -68,9 +71,12 @@ export const Cart = () => {
           <>
             <h4 className={cartCss.total}> Total: ${total} </h4>
             <div className={cartCss.botones}>
-            <button className="btn btn-outline-success" onClick={handleClearCart}>
+            <button className="btn btn-outline-danger" onClick={handleClearCart}>
               Vaciar Carrito
             </button>
+            <Link to="/">
+              <button className="ms-2 btn btn-outline-success">Seguir viendo</button>
+            </Link>
             <Link to="/checkout">
               <button className="ms-2 btn btn-success">Comprar</button>
             </Link>

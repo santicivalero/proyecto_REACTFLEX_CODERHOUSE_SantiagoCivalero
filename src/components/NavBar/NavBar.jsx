@@ -31,13 +31,10 @@ const NavBar = () => {
              <li className="nav-item">Otros</li>
            </NavLink>
          </div>
-         {/* <Link to="/cart" className="col-md-3 ml-auto mr-4">
-           <CartWidget />
-         </Link> */}
          <NavLink to="/cart" className={({ isActive }) => `${isActive ? navBar.activeCart : ""} col-md-3 ml-auto mr-4 ${navBar.cart}`}>         
          <CartWidget />
            </NavLink>
-         
+           
        </nav>
      </>
    );
