@@ -5,13 +5,13 @@ const Item = ({ id, name, img, description }) => {
   
   const limitText = (text, maxLength) => {
     if (text.length <= maxLength) {
-      return text;
+      return text + '      ...';
     }
     return text.slice(0, maxLength) + '...';
   };
 
   // Llama a limitText para limitar el texto de la descripción antes de renderizar el componente
-  const limitedDescription = limitText(description, 88);
+  const limitedDescription = limitText(description, 90);
 
 
 

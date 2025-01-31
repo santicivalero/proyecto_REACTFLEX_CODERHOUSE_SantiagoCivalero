@@ -84,7 +84,7 @@ export const Checkout = () => {
 
   return (
     <div className={`container align-content-center ${checkout.checkoutContainer}`}>
-      {loading ? ( // Mostrar el spinner si está cargando
+      {loading ? ( 
         <Spinner />
       ) : (
         <div className={`row d-flex justify-content-center m-5 card col-md-12 ${checkout.checkout}`}>
